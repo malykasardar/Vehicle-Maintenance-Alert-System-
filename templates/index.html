@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vehicle Maintenance Alert</title>
+</head>
+<body>
+    <h1>Vehicle Maintenance Alert</h1>
+    <form action="/" method="POST">
+        <label for="mileage">Enter current mileage:</label>
+        <input type="number" id="mileage" name="mileage" required>
+        <input type="submit" value="Submit">
+    </form>
+
+    {% if next_service %}
+    <p>Next Service Due at: {{ next_service }} miles on {{ next_service_date }}</p>
+    {% endif %}
+</body>
+</html>
